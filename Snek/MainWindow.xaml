@@ -1,0 +1,27 @@
+﻿<Window x:Class="Snek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snek"
+        mc:Ignorable="d"
+        Title="Snek Score: 0" Height="480" Width="640" MinWidth="640" MinHeight="480" MaxWidth="640" MaxHeight="480" Background="Black">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:MainWindow.PressUp}" 
+                     Executed="TurnUp"/>
+        <CommandBinding Command="{x:Static local:MainWindow.PressDown}" 
+                     Executed="TurnDown"/>
+        <CommandBinding Command="{x:Static local:MainWindow.PressLeft}" 
+                     Executed="TurnLeft"/>
+        <CommandBinding Command="{x:Static local:MainWindow.PressRight}" 
+                     Executed="TurnRight"/>
+        <CommandBinding Command="{x:Static local:MainWindow.PressEsc}" 
+                     Executed="Reset"/>
+    </Window.CommandBindings>
+
+    <Grid>
+        <TextBlock x:Name="playingFldTbl" TextWrapping="Wrap" Text="TextBlock" FontFamily="Cascadia Code" Margin="2,2,2,2" VerticalAlignment="Top" Background="White" LineHeight="8" LineStackingStrategy="BlockLineHeight"/>
+
+    </Grid>
+</Window>
